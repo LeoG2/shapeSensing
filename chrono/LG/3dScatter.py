@@ -11,7 +11,6 @@ from matplotlib import interactive
 
 
 fig = plt.figure()
-
 ax = fig.add_subplot(111,projection='3d')
 
 
@@ -21,6 +20,8 @@ ax.scatter(x, y, z, c='r', marker='o')
 ax.set_xlabel('X Label')
 ax.set_ylabel('Y Label')
 ax.set_zlabel('Z Label')
+
+
 
 ax.view_init(0,0,180)
 

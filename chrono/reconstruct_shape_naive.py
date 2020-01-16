@@ -74,7 +74,8 @@ def reconstruct_shape(na, nl, unit_factor, ring_gap=0.125,
 
 # Change this path to asset path, if running from other working dir.
 # It must point to the data folder, containing GUI assets (textures, fonts, meshes, etc.)
-chrono.SetChronoDataPath("../data/")
+chrono.SetChronoDataPath("//smbhome.uscs.susx.ac.uk/lag37/Documents/shapeSim/shapeSensing/chrono/data/")
+#chrono.SetChronoDataPath("../data/")
 
 UNIT_FACTOR = 0.01
 RING_GAP = 12.5 * UNIT_FACTOR
@@ -186,7 +187,7 @@ mvisualizebeamA.SetSmoothFaces(True)
 mvisualizebeamA.SetWireframe(False)
 mesh.AddAsset(mvisualizebeamA)
 
-mysystem.AddMesh(mesh)
+#mysystem.AddMesh(mesh)
 
 # ---------------------------------------------------------------------
 # IRRLICHT

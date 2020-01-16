@@ -1,0 +1,20 @@
+import pychrono as chrono
+import pychrono.fea as fea
+from scypi.optimize import fmin_bfgs
+from scipy.optimize import minimize
+import panda as pd
+from shape_energy import shape_energy
+import numpy as np
+from gen_cylinder import gen_cylinder
+import pychrono.irrlicht as chronoirr
+import pychrono.mkl as mkl 
+import chrono_utils as tools
+import math
+import geo
+
+# Global -- textile
+SENSOR_LEN=10. #in mm. 
+RING_GAP = 12.5 # in mm.
+numSensRing = 8
+numRings = 8
+sleevThickness = 4.215 # in mm

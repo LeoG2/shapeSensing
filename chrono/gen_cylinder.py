@@ -78,7 +78,7 @@ def downsample(from_nodes, from_edges, from_na, from_nl,
     # TODO add last nodes if target nodes are missing
 
     # Update neighborhood
-    _, to_edges = gen_cylinder(10,10,to_na, to_nl)
+    _, to_edges = gen_cylinder(10,10,to_na, to_nl, 4)
     # to_edges = from_edges.copy()
     # for i in range(from_na):
     #     for j in range(from_nl):

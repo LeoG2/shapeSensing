@@ -59,6 +59,6 @@ def cylGen(r1, r2, length, na, nl, neighbours):
 
     return np.array(nodes), np.array(edges)
     
-    run 3dScatter()
+    #run 3dScatter()
     
         

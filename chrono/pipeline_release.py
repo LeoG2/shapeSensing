@@ -29,7 +29,7 @@ print("Cloth Simulation: Physical (pink) and optimisation (green) simulations")
 
 # Change this path to asset path, if running from other working dir.
 # It must point to the data folder, containing GUI assets (textures, fonts, meshes, etc.)
-chrono.SetChronoDataPath("../data/")
+chrono.SetChronoDataPath("//smbhome.uscs.susx.ac.uk/lag37/Documents/shapeSim/shapeSensing/chrono/data/")
 
 # Global -- Changeable setup
 NEIGHBOURS = 4

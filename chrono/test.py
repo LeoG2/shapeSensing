@@ -17,6 +17,7 @@ import chrono_utils as tool
 import math
 # Change this path to asset path, if running from other working dir.
 # It must point to the data folder, containing GUI assets (textures, fonts, meshes, etc.)
+#chrono.SetChronoDataPath("//smbhome.uscs.susx.ac.uk/lag37/Documents/shapeSim/shapeSensing/chrono/data/")
 chrono.SetChronoDataPath("../data/")
 
 UNIT_FACTOR = 0.01
@@ -34,6 +35,10 @@ HUMAN_DENSITY = 198.5  # Dkg/m^3
 mysystem = chrono.ChSystemSMC()
 contact_method = chrono.ChMaterialSurface.SMC
 mysystem.Set_G_acc(chrono.ChVectorD(0.,0.,0.))
+path=chrono.GetChronoDataPath()
+print(path)
+
+#filepath = tool.obj_from_millimeter("//smbhome.uscs.susx.ac.uk/lag37/Documents/shapeSim/shapeSensing/chrono/data/" + SHAPE_PATH, UNIT_FACTOR, f"_{metric}")
 
 filepath = tool.obj_from_millimeter(chrono.GetChronoDataPath() + SHAPE_PATH, UNIT_FACTOR, f"_{metric}")
 

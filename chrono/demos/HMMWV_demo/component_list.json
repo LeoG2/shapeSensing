@@ -1,0 +1,459 @@
+{
+    "name": "HMMWVfull",
+    "template": "WheeledVehicle",
+    "chassis": {
+        "name": "Chassis",
+        "template": "RigidChassis",
+        "output": true,
+        "bodies": [
+            {
+                "name": "Chassis body",
+                "id": 0
+            }
+        ],
+        "markers": [
+            {
+                "name": "Chassis driver position",
+                "id": 100073,
+                "body name": "Chassis body",
+                "body id": 0
+            },
+            {
+                "name": "Chassis COM",
+                "id": 100074,
+                "body name": "Chassis body",
+                "body id": 0
+            }
+        ]
+    },
+    "suspension": [
+        {
+            "name": "FrontSusp",
+            "template": "DoubleWishbone",
+            "output": true,
+            "bodies": [
+                {
+                    "name": "FrontSusp_spindle_L",
+                    "id": 100080
+                },
+                {
+                    "name": "FrontSusp_spindle_R",
+                    "id": 100108
+                },
+                {
+                    "name": "FrontSusp_upright_L",
+                    "id": 100081
+                },
+                {
+                    "name": "FrontSusp_upright_R",
+                    "id": 100109
+                },
+                {
+                    "name": "FrontSusp_UCA_L",
+                    "id": 100082
+                },
+                {
+                    "name": "FrontSusp_UCA_R",
+                    "id": 100110
+                },
+                {
+                    "name": "FrontSusp_LCA_L",
+                    "id": 100083
+                },
+                {
+                    "name": "FrontSusp_LCA_R",
+                    "id": 100111
+                }
+            ],
+            "shafts": [
+                {
+                    "name": "FrontSusp_axle_L",
+                    "id": 100106
+                },
+                {
+                    "name": "FrontSusp_axle_R",
+                    "id": 100134
+                }
+            ],
+            "joints": [
+                {
+                    "name": "FrontSusp_revolute_L",
+                    "id": 100084,
+                    "body1 name": "FrontSusp_spindle_L",
+                    "body2 name": "FrontSusp_upright_L",
+                    "body1 id": 100080,
+                    "body2 id": 100081
+                },
+                {
+                    "name": "FrontSusp_revolute_R",
+                    "id": 100112,
+                    "body1 name": "FrontSusp_spindle_R",
+                    "body2 name": "FrontSusp_upright_R",
+                    "body1 id": 100108,
+                    "body2 id": 100109
+                },
+                {
+                    "name": "FrontSusp_revoluteUCA_L",
+                    "id": 100087,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_UCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100082
+                },
+                {
+                    "name": "FrontSusp_revoluteUCA_R",
+                    "id": 100115,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_UCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100110
+                },
+                {
+                    "name": "FrontSusp_sphericalUCA_L",
+                    "id": 100090,
+                    "body1 name": "FrontSusp_UCA_L",
+                    "body2 name": "FrontSusp_upright_L",
+                    "body1 id": 100082,
+                    "body2 id": 100081
+                },
+                {
+                    "name": "FrontSusp_sphericalUCA_R",
+                    "id": 100118,
+                    "body1 name": "FrontSusp_UCA_R",
+                    "body2 name": "FrontSusp_upright_R",
+                    "body1 id": 100110,
+                    "body2 id": 100109
+                },
+                {
+                    "name": "FrontSusp_revoluteLCA_L",
+                    "id": 100093,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_LCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100083
+                },
+                {
+                    "name": "FrontSusp_revoluteLCA_R",
+                    "id": 100121,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_LCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100111
+                },
+                {
+                    "name": "FrontSusp_sphericalLCA_L",
+                    "id": 100096,
+                    "body1 name": "FrontSusp_LCA_L",
+                    "body2 name": "FrontSusp_upright_L",
+                    "body1 id": 100083,
+                    "body2 id": 100081
+                },
+                {
+                    "name": "FrontSusp_sphericalLCA_R",
+                    "id": 100124,
+                    "body1 name": "FrontSusp_LCA_R",
+                    "body2 name": "FrontSusp_upright_R",
+                    "body1 id": 100111,
+                    "body2 id": 100109
+                },
+                {
+                    "name": "FrontSusp_distTierod_L",
+                    "id": 100099,
+                    "body1 name": "Steering_link",
+                    "body2 name": "FrontSusp_upright_L",
+                    "body1 id": 100075,
+                    "body2 id": 100081
+                },
+                {
+                    "name": "FrontSusp_distTierod_R",
+                    "id": 100127,
+                    "body1 name": "Steering_link",
+                    "body2 name": "FrontSusp_upright_R",
+                    "body1 id": 100075,
+                    "body2 id": 100109
+                }
+            ],
+            "linear spring-dampers": [
+                {
+                    "name": "FrontSusp_spring_L",
+                    "id": 100103,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_LCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100083
+                },
+                {
+                    "name": "FrontSusp_spring_R",
+                    "id": 100131,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_LCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100111
+                },
+                {
+                    "name": "FrontSusp_shock_L",
+                    "id": 100100,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_LCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100083
+                },
+                {
+                    "name": "FrontSusp_shock_R",
+                    "id": 100128,
+                    "body1 name": "Chassis body",
+                    "body2 name": "FrontSusp_LCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100111
+                }
+            ]
+        },
+        {
+            "name": "RearSusp",
+            "template": "DoubleWishbone",
+            "output": false,
+            "bodies": [
+                {
+                    "name": "RearSusp_spindle_L",
+                    "id": 100136
+                },
+                {
+                    "name": "RearSusp_spindle_R",
+                    "id": 100164
+                },
+                {
+                    "name": "RearSusp_upright_L",
+                    "id": 100137
+                },
+                {
+                    "name": "RearSusp_upright_R",
+                    "id": 100165
+                },
+                {
+                    "name": "RearSusp_UCA_L",
+                    "id": 100138
+                },
+                {
+                    "name": "RearSusp_UCA_R",
+                    "id": 100166
+                },
+                {
+                    "name": "RearSusp_LCA_L",
+                    "id": 100139
+                },
+                {
+                    "name": "RearSusp_LCA_R",
+                    "id": 100167
+                }
+            ],
+            "shafts": [
+                {
+                    "name": "RearSusp_axle_L",
+                    "id": 100162
+                },
+                {
+                    "name": "RearSusp_axle_R",
+                    "id": 100190
+                }
+            ],
+            "joints": [
+                {
+                    "name": "RearSusp_revolute_L",
+                    "id": 100140,
+                    "body1 name": "RearSusp_spindle_L",
+                    "body2 name": "RearSusp_upright_L",
+                    "body1 id": 100136,
+                    "body2 id": 100137
+                },
+                {
+                    "name": "RearSusp_revolute_R",
+                    "id": 100168,
+                    "body1 name": "RearSusp_spindle_R",
+                    "body2 name": "RearSusp_upright_R",
+                    "body1 id": 100164,
+                    "body2 id": 100165
+                },
+                {
+                    "name": "RearSusp_revoluteUCA_L",
+                    "id": 100143,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_UCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100138
+                },
+                {
+                    "name": "RearSusp_revoluteUCA_R",
+                    "id": 100171,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_UCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100166
+                },
+                {
+                    "name": "RearSusp_sphericalUCA_L",
+                    "id": 100146,
+                    "body1 name": "RearSusp_UCA_L",
+                    "body2 name": "RearSusp_upright_L",
+                    "body1 id": 100138,
+                    "body2 id": 100137
+                },
+                {
+                    "name": "RearSusp_sphericalUCA_R",
+                    "id": 100174,
+                    "body1 name": "RearSusp_UCA_R",
+                    "body2 name": "RearSusp_upright_R",
+                    "body1 id": 100166,
+                    "body2 id": 100165
+                },
+                {
+                    "name": "RearSusp_revoluteLCA_L",
+                    "id": 100149,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_LCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100139
+                },
+                {
+                    "name": "RearSusp_revoluteLCA_R",
+                    "id": 100177,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_LCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100167
+                },
+                {
+                    "name": "RearSusp_sphericalLCA_L",
+                    "id": 100152,
+                    "body1 name": "RearSusp_LCA_L",
+                    "body2 name": "RearSusp_upright_L",
+                    "body1 id": 100139,
+                    "body2 id": 100137
+                },
+                {
+                    "name": "RearSusp_sphericalLCA_R",
+                    "id": 100180,
+                    "body1 name": "RearSusp_LCA_R",
+                    "body2 name": "RearSusp_upright_R",
+                    "body1 id": 100167,
+                    "body2 id": 100165
+                },
+                {
+                    "name": "RearSusp_distTierod_L",
+                    "id": 100155,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_upright_L",
+                    "body1 id": 0,
+                    "body2 id": 100137
+                },
+                {
+                    "name": "RearSusp_distTierod_R",
+                    "id": 100183,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_upright_R",
+                    "body1 id": 0,
+                    "body2 id": 100165
+                }
+            ],
+            "linear spring-dampers": [
+                {
+                    "name": "RearSusp_spring_L",
+                    "id": 100159,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_LCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100139
+                },
+                {
+                    "name": "RearSusp_spring_R",
+                    "id": 100187,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_LCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100167
+                },
+                {
+                    "name": "RearSusp_shock_L",
+                    "id": 100156,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_LCA_L",
+                    "body1 id": 0,
+                    "body2 id": 100139
+                },
+                {
+                    "name": "RearSusp_shock_R",
+                    "id": 100184,
+                    "body1 name": "Chassis body",
+                    "body2 name": "RearSusp_LCA_R",
+                    "body1 id": 0,
+                    "body2 id": 100167
+                }
+            ]
+        }
+    ],
+    "steering": [
+        {
+            "name": "Steering",
+            "template": "PitmanArm",
+            "output": true,
+            "bodies": [
+                {
+                    "name": "Steering_link",
+                    "id": 100075
+                },
+                {
+                    "name": "Steering_arm",
+                    "id": 100076
+                }
+            ],
+            "joints": [
+                {
+                    "name": "Steering_revolute",
+                    "id": 100077,
+                    "body1 name": "Chassis body",
+                    "body2 name": "Steering_arm",
+                    "body1 id": 0,
+                    "body2 id": 100076
+                },
+                {
+                    "name": "Steering_revsph",
+                    "id": 100079,
+                    "body1 name": "Chassis body",
+                    "body2 name": "Steering_link",
+                    "body1 id": 0,
+                    "body2 id": 100075
+                },
+                {
+                    "name": "Steering_universal",
+                    "id": 100078,
+                    "body1 name": "Steering_arm",
+                    "body2 name": "Steering_link",
+                    "body1 id": 100076,
+                    "body2 id": 100075
+                }
+            ]
+        }
+    ],
+    "brake": [
+        {
+            "name": "Brake_FL",
+            "template": "BrakeSimple",
+            "output": false
+        },
+        {
+            "name": "Brake_FR",
+            "template": "BrakeSimple",
+            "output": false
+        },
+        {
+            "name": "Brake_RL",
+            "template": "BrakeSimple",
+            "output": false
+        },
+        {
+            "name": "Brake_RR",
+            "template": "BrakeSimple",
+            "output": false
+        }
+    ],
+    "anti-roll bar": []
+}
